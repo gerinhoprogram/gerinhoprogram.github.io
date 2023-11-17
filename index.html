@@ -6,46 +6,187 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BBC Digital | Desconto combustível</title>
-    <link rel="stylesheet" href="css/estilo.css">
     <script src="https://kit.fontawesome.com/650f618ca2.js" crossorigin="anonymous"></script>
 
     <style>
-        .text-verde {
-            color: #016938;
-            font-size: 17pt;
-            line-height: 17pt;
+        @font-face {
+            font-family: 'Avenir';
+            src: url('Avenir Medium.ttf');
         }
 
-        header p {
-            font-size: 17pt;
-            line-height: 17pt;
+        @font-face {
+            font-family: 'Avenir light';
+            src: url('Avenir Light.ttf');
+        }
+
+        @font-face {
+            font-family: 'Avenir black';
+            src: url('Avenir Black.ttf');
+        }
+
+        @font-face {
+            font-family: 'Avenir Heavy';
+            src: url('Avenir Heavy.ttf');
+        }
+
+        @font-face {
+            font-family: 'DS-DIGIT';
+            src: url('DS-DIGIT.ttf');
+        }
+
+        body {
+            color: #55565b;
+            font-size: 15pt;
+            line-height: 18pt;
+            font-family: 'Avenir light';
+            font-weight: 300;
+        }
+
+        .titulo-topo {
+
+            background-image: url('banner.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 1000px;
+        }
+
+        .container {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        h1,
+        p,
+        h2,
+        h3,
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        .s10,
+        .s500,
+        .preco1,
+        .preco2 {
+            font-family: 'DS-DIGIT';
+            color: #fff;
+            position: absolute;
+            font-size: 60pt;
+            line-height: 60pt;
+        }
+
+        .s10 {
+            top: 677px;
+            left: 120px;
+        }
+
+        .preco1 {
+            top: 677px;
+            left: 360px;
+        }
+
+        .s500 {
+            top: 820px;
+            left: 90px;
+        }
+
+        .preco2 {
+            top: 820px;
+            left: 360px;
+        }
+
+        .posto {
+            position: absolute;
+            top: 1000px;
+            text-align: center;
+            font-size: 30pt;
+            color: #333333;
+            width: 100%
+        }
+
+        .endereco {
+            width: 100%;
+            position: absolute;
+            top: 1145px;
+            text-align: center;
+        }
+
+        .endereco img {
+            height: 50px;
+            object-fit: contain;
+        }
+
+        ul {
+            margin: 0;
+            padding: 25px 0 0 25px;
+        }
+
+        li {
+            margin-bottom: 15px;
         }
 
         h1 {
-            color: #fff;
-            margin-bottom: 30px;
+            color: #ffcc00 !important;
+            text-transform: uppercase;
+            font-size: 40pt;
+            line-height: 41pt;
+            font-family: 'Avenir Heavy';
         }
 
-        .balao {
-            color: #016938;
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 15px;
-            margin-top: 20px;
-            display: inline-table;
+        b {
+            font-family: 'Avenir black';
         }
 
-        .cadastrar {
-            display: inline-table;
-            background-color: #016938;
-            color: #fff;
-            text-align: center;
-            border-radius: 15px;
-            padding: 20px;
+        section {
             margin-top: 30px;
-            font-size: 20pt;
-            line-height: 20pt;
+            padding: 0 50px 0 50px;
         }
+        a {
+            text-decoration: none;
+            color: #55565b
+        }
+
+
+        @media screen and (max-width: 1155px) {
+            .boleto {
+                width: 270px;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+            .container {
+                width: 100%;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            .titulo-topo {
+                background: #016938;
+                padding: 150px 10px 10px 10px;
+            }
+
+            h1 {
+                font-size: 25pt;
+                line-height: 26pt;
+            }
+
+            .subtexto {
+                padding: 10px;
+            }
+
+            .boleto {
+                bottom: -10px;
+                width: 130px;
+            }
+
+            .detalhe {
+                width: 300px
+            }
+        }
+
     </style>
 
 </head>
@@ -54,15 +195,16 @@
 
     <div style=" width: 600px; margin: 0 auto;">
 
-        <header style=" background-image: url('imagens/banner.png'); 
+        <header style=" background-image: url('banner.png'); 
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: center;
-        height: 1423px; ">
+        height: 1423px; 
+        position: relative">
 
             <div style="padding-top: 380px; padding-left: 45px">
                 <h1><b>ABASTEÇA <br>E GANHE!</b></h1>
-                <p style="color: #fff">Pague com <b>QR Code BBC</b><br>
+                <p style="color: #fff; font-size: 17pt; ">Pague com <b>QR Code BBC</b><br>
                     e ganhe <b>Desconto no Diesel</b></p>
             </div>
 
@@ -71,7 +213,7 @@
             </div>
 
             <div class="preco1">
-               
+
             </div>
 
             <div class="s500">
@@ -79,17 +221,17 @@
             </div>
 
             <div class="preco2">
-                
+
             </div>
 
             <div class="posto">
                 <b>POSTO</b><br><br>
-                
+
             </div>
 
             <div class="endereco">
                 <a href="">
-                    <img src="imagens/endereco.png" alt="">
+                    <img src="endereco.png" alt="">
                 </a>
             </div>
 
@@ -101,12 +243,20 @@
             <p style="margin-bottom: 30px; margin-top: 70px; color: #016938; font-size: 22pt; line-height: 22pt;">
                 <b>Confira a rede credenciada no app</b>
             </p>
-            <p><a href="https://play.google.com/store/games?device=windows&&utm_source=latam_Med&utm_medium=hasem&utm_content=Dec1622&utm_campaign=Evergreen&pcampaignid=MKT-EDR-latam-br-1000189-Med-hasem-py-Evergreen-Dec1622-Text_Search_BKWS-id_102353_%7CEXA%7CONSEM_kwid_43700074624718464&gclid=EAIaIQobChMI-ZHXq8PIggMVzACtBh3urQCGEAAYASAAEgKVQfD_BwE&gclsrc=aw.ds"><img src="imagens/google-play.png" alt="" width="190"></a>&nbsp;&nbsp;<a href="https://www.apple.com/br/app-store/"><img src="imagens/app-store.png" alt="" width="190"></a></p>
+            <p><a
+                    href="https://play.google.com/store/games?device=windows&&utm_source=latam_Med&utm_medium=hasem&utm_content=Dec1622&utm_campaign=Evergreen&pcampaignid=MKT-EDR-latam-br-1000189-Med-hasem-py-Evergreen-Dec1622-Text_Search_BKWS-id_102353_%7CEXA%7CONSEM_kwid_43700074624718464&gclid=EAIaIQobChMI-ZHXq8PIggMVzACtBh3urQCGEAAYASAAEgKVQfD_BwE&gclsrc=aw.ds"><img
+                        src="google-play.png" alt="" width="190"></a>&nbsp;&nbsp;<a
+                    href="https://www.apple.com/br/app-store/"><img src="app-store.png" alt="" width="190"></a>
+            </p>
 
         </section>
         <br>
 
-        <div class="atendimento">
+        <div style=" background-color: #ddd;
+        text-align: center;
+        padding: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px">
             <p>
                 <strong>Central de Atendimento:</strong> 0800 771 4080<br>
                 <strong>Deficientes Auditivos ou de Fala:</strong> 0800 025 1335<br>
@@ -118,17 +268,18 @@
 
             </p>
         </div>
-        <footer>
-            <a href="https://bancobbcdigital.com.br" target="_blank" rel="noopener noreferrer">
+
+        <footer style="text-align: center;color: #016938;padding-bottom: 30px;">
+            <a style="font-family: 'Avenir Heavy'; color: #016938" href="https://bancobbcdigital.com.br" target="_blank" rel="noopener noreferrer">
                 www.bancobbcdigital.com.br
             </a><br>
-            <a href="https://www.facebook.com/bbcdigitaloficial" target="_blank" rel="noopener noreferrer">
+            <a  href="https://www.facebook.com/bbcdigitaloficial" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-facebook"></i>
             </a>
-            <a href="https://www.instagram.com/bbcdigital/" target="_blank" rel="noopener noreferrer">
+            <a  href="https://www.instagram.com/bbcdigital/" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.linkedin.com/company/bbcdigital?originalSubdomain=br" target="_blank"
+            <a  href="https://www.linkedin.com/company/bbcdigital?originalSubdomain=br" target="_blank"
                 rel="noopener noreferrer">
                 <i class="fab fa-linkedin-in"></i>
             </a>
